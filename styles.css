@@ -54,6 +54,7 @@ main {
     justify-content: space-between;
     padding: 130px; 
     background-color: #9ba8dc; /* Lavender background */
+    text-align: justify;
 }
 
 .left-container {
@@ -69,6 +70,7 @@ main {
     width: 60%; 
     padding-left: 20px;
     text-align: left;
+    text-align: justify;
 }
 
 .profile-container img {
@@ -77,22 +79,19 @@ main {
     border-radius: 30%; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     animation: move-up-down 5s ease-in-out infinite;
-    
-  }
-  
-  @keyframes move-up-down {
+}
+
+@keyframes move-up-down {
     0% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
     50% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  }
-  
-  
+}
 
 .contact-info {
     margin-top: 20px;
@@ -105,10 +104,10 @@ main {
     margin: 5px 0;
 }
 
- #about h2 {
+#about h2 {
     font-size: 2.2rem;
     margin-bottom: 10px;
-    color: #F5F5DC; /* Black heading color */
+    color: #F5F5DC; /* Beige heading color */
 }
 
 #about p {
@@ -117,30 +116,28 @@ main {
     line-height: 1.5;
     text-align: justify;
 }
-/*#about p {
-    font-size: 1.1rem;
-    color: #ffffff; /* Slightly lighter black text 
-    line-height: 2.5;
-    justify-content: left;
-    text-align: left;
-} */
 
 @media (max-width: 768px) {
     .intro {
         flex-direction: column;
-        /* align-items: center;
-        text-align: center; */
+        padding: 30px; /* Reduce padding for mobile */
+        text-align: center;
     }
 
     .left-container, .right-container {
         width: 100%;
+        padding: 0; /* Adjust padding for better mobile view */
     }
 
     .right-container {
         padding-left: 0;
     }
-}
 
+    .profile-container img {
+        width: 250px;
+        height: 250px;
+    }
+}
 
 h2 {
     font-size: 2.7rem;
@@ -155,18 +152,41 @@ h2 {
     justify-content: space-between;
     padding-left: 10px;
     padding-right: 10px;
+    gap: 20px; /* Add some gap between skill items */
+    text-align: justify;
 }
-  
+
 .skill-category {
     margin: 0px;
     padding: 20px;
-    width: calc(25% - 20px);
+    width: calc(25% - 20px); /* Adjusted width for larger screens */
     border: 1px solid #ddd;
     background-color: #6984dc;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
 }
-  
+
+/* Responsive Design for Skills */
+@media (max-width: 768px) {
+    .skills-container {
+        justify-content: center; /* Center skills on mobile */
+    }
+
+    .skill-category {
+        width: calc(50% - 20px); /* Take 2 columns on small devices */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-category {
+        width: 100%; /* Full width on very small devices */
+        margin-bottom: 20px;
+    }
+}
+
+
 .skill-category h3 {
     font-weight: bold;
     margin-bottom: 5px;
@@ -178,37 +198,27 @@ h2 {
     color: #000000;
 }
 
-  
 .skill-category p {
     font-size: 16px;
     color: #F5F5DC;
     text-align: center;
 }
 
-#certifications ul{
+#certifications ul {
     list-style-type: none;
     padding-bottom: 30px;
     margin: 2px;
-    /* display: flex; */
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    text-align: justify;
 }
 
 #certifications ul li {
     background-color: #728de4;
-    /* padding: 15px 30px; */
-    /* border-radius: 30px; */
     font-size: 16px;
     color: #000000;
-    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
     margin-bottom: 20px;
-
 }
-
-
 
 .project-container {
     display: flex;
@@ -216,8 +226,9 @@ h2 {
     justify-content: space-between;
     gap: 20px;
     padding: 10px;
+    text-align: justify;
 }
-  
+
 .project-card {
     background-color: #F5F5DC;
     padding: 30px;
@@ -227,7 +238,7 @@ h2 {
     transition: transform 0.3s;
     width: calc(33.33% - 20px); 
 }
-  
+
 .project-card:hover {
     transform: translateY(-10px);
     background-color: #eeecc4;
@@ -248,40 +259,35 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
-  }
-  
-  footer .container {
+}
+
+footer .container {
     max-width: 800px;
     margin: 0 auto;
-  }
-  
-  footer ul.social-links {
+}
+
+footer ul.social-links {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  footer ul.social-links li {
+}
+
+footer ul.social-links li {
     display: inline-block;
     margin-right: 20px;
-  }
-  
-  footer ul.social-links li a {
+}
+
+footer ul.social-links li a {
     color: #fff;
     text-decoration: none;
-  }
-  
-  footer ul.social-links li a:hover {
+}
+
+footer ul.social-links li a:hover {
     color: #ccc;
-  }
+}
 
-/* Responsive Design */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .intro {
-        padding: 20px;
-        text-align: center;
-    }
-
     .project-container {
         flex-direction: column;
         align-items: center;
